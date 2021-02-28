@@ -147,13 +147,13 @@
     margin-bottom: 16px;
 }
 .lf h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
     opacity: 0;
     z-index: 10;
     animation: appearup 1s forwards;
     animation-delay: 2s;
     font-weight: 600;
-    color: #e0e0e0;
+    color: #ffffff;
 }
 .lf span {
     padding: 12px 0;
@@ -166,7 +166,8 @@
 }
 .rt {
     flex: 3;
-    height: 380px;
+    height: 340px;
+    margin-bottom: 32px;
     opacity: 0;
     animation: openrt 0.6s forwards;
     animation-delay: 2.5s;
@@ -184,9 +185,9 @@
     transform-origin: left;
 }
 .rt .img-box {
-    width: 100%;
+    width: 80%;
     height: 100%;
-    background: url('./bgs.jpg');
+    background: url('./bgs.jpg') #151515;
     background-position: 50% 50%;
     background-size: conver;
     background-repeat: no-repeat;
@@ -198,9 +199,46 @@
     transform: translateX(-50%);
 
 }
+.paragraph {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+    transform: translateY(50%);
+    opacity: 0;
+    animation: apearpara 1.2s forwards cubic-bezier(.65,.23,.52,.9);
+    animation-delay: 2.8s;
+}
+.paragraph p{
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.5;
+}
 .appearopa {
     animation: appearopa 0.3s forwards;
     animation-delay: 0.8s;
+}
+.sns {
+    position: absolute;
+    bottom: 24px;
+    left: 32px;
+    width: 18px;
+    height: 18px;
+    z-index: 150;
+}
+.sns .fab {
+    color: #fff;
+    font-size: 1.6rem;
+}
+@keyframes apearpara {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 @keyframes openrt {
     0%{
@@ -277,10 +315,5 @@
     }
 }
 @media only screen and (min-width: 760px){
-    #header {
-        padding: 40px 0 0;
-    }
-    #header .logo span {
-        font-size: 230px;
-    }
+
 }

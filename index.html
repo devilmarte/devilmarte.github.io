@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="commons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 
     <title>Document</title>
 </head>
@@ -44,7 +45,7 @@
                 <article class="article">
                     <div class="desc lf">
                         <h2>LG 일상비일상의 틈</h2>
-                        <span>HTML, CSS, JAVASCRIPT, Vue.js</span>
+                        <span>HTML, CSS, JAVASCRIPT, Nuxt.js</span>
                     </div>
                     <div class="desc rt">
                         <div class="shell">
@@ -54,9 +55,18 @@
         
                         </div>
                     </div>
+                    <div class="paragraph">
+                        <p>
+                            Javascript, Nuxt.js, react-native
+                            하이브리드 앱(스마트폰, 태블릿), 메인화면 인터렉션 슬라이드, 층별 소개, 기타 페이지 인터렉션등 적용 및 고도화
+                        </p>
+                    </div>
                 </article>
             </div>
         </section>
+        <div class="sns">
+            <a href="https://www.instagram.com/devmarte/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
     </div>
 
     <script>
@@ -80,8 +90,7 @@
         let myY = 0
         let cX = 0
         let cY = 0
-        let accel = 0.025
-        let caccel = 0.15
+        let accel = 0.015
 
         wrap.addEventListener('mousemove', xandymove)
 
@@ -101,10 +110,7 @@
             myX += (x-myX) * accel
             myY += (y-myY) * accel
 
-            cX += (oriX-cX) * caccel
-            cY += (oriY-cY) * caccel
-
-            bg.style.backgroundPosition = `calc(50% + ${-myX/6}px) calc(50% + ${-myY/6}px)`
+            bg.style.backgroundPosition = `calc(50% + ${-myX/8}px) calc(50% + ${-myY/8}px)`
             // bk.style.transform = `translate(${cX - 10}px, ${cY - 10}px)`
             window.requestAnimationFrame(loop)
         }
