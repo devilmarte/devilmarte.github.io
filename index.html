@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="commons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="open">
+        <div class="layer"></div>
+        <div class="layer"></div>
+    </div>
+
+    <div class="container">
+        <!-- <div id="bk-dot"></div> -->
+        <header id="header">
+            <div class="logo">
+                <h1>MARTE</h1>
+            </div>
+            <div class="burger">
+            </div>
+            <ul class="navigation">
+                <li>
+                    Home
+                </li>
+                <li>
+                    About
+                </li>
+                <li>
+                    Works
+                </li>
+                <li>
+                    Contact
+                </li>
+            </ul>
+        </header>
+        <section id="main">
+            <div class="main-container">
+                <article class="article">
+                    <div class="desc lf">
+                        <h2>LG 일상비일상의 틈</h2>
+                        <span>HTML, CSS, JAVASCRIPT, Vue.js</span>
+                    </div>
+                    <div class="desc rt">
+                        <div class="shell">
+        
+                        </div>
+                        <div class="img-box">
+        
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const burger = document.querySelector('.burger')
+        const navi = document.querySelector('.navigation')
+        
+        burger.addEventListener('click', ()=>{
+            const navi = document.querySelector('.navigation')
+            navi.classList.toggle('active-nav')
+        })
+
+        const wrap = document.documentElement
+        const bg = document.querySelector('.img-box')
+        // const bk = document.getElementById('bk-dot')
+
+        let x = 0
+        let y = 0
+        let oriX = 0
+        let oriY = 0
+        let myX = 0
+        let myY = 0
+        let cX = 0
+        let cY = 0
+        let accel = 0.025
+        let caccel = 0.15
+
+        wrap.addEventListener('mousemove', xandymove)
+
+        function xandymove(e) {
+            x = (e.clientX - window.innerWidth / 2)
+            y = (e.clientY - window.innerWidth / 2)
+            oriX = (e.clientX)
+            oriY = (e.clientY)
+
+            // bk.classList.add('appearopa')
+        }
+        if(!document.body.offsetWidth < 760){
+            loop()
+        }
+
+        function loop() {
+            myX += (x-myX) * accel
+            myY += (y-myY) * accel
+
+            cX += (oriX-cX) * caccel
+            cY += (oriY-cY) * caccel
+
+            bg.style.backgroundPosition = `calc(50% + ${-myX/6}px) calc(50% + ${-myY/6}px)`
+            // bk.style.transform = `translate(${cX - 10}px, ${cY - 10}px)`
+            window.requestAnimationFrame(loop)
+        }
+
+    </script>
+</body>
+</html>
