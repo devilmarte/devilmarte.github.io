@@ -41,7 +41,6 @@
             </ul>
         </header>
         <section id="main">
-            <div class="main-container">
                 <article class="article">
                     <div class="desc lf">
                         <h2>LG 일상비일상의 틈</h2>
@@ -60,9 +59,50 @@
                             Javascript, Nuxt.js, react-native
                             하이브리드 앱(스마트폰, 태블릿), 메인화면 인터렉션 슬라이드, 층별 소개, 기타 페이지 인터렉션등 적용 및 고도화
                         </p>
+                        <button><a href="#">더보기</a></button>
                     </div>
                 </article>
-            </div>
+                <article class="article slide-in">
+                    <div class="desc lf">
+                        <h2>스터디 코리안 리뉴얼</h2>
+                        <span>HTML, CSS, JAVASCRIPT</span>
+                    </div>
+                    <div class="desc rt">
+                        <div class="shell">
+        
+                        </div>
+                        <div class="img-box bg-2">
+        
+                        </div>
+                    </div>
+                    <div class="paragraph">
+                        <p>
+                            요청한 디자인(psd) 토대로 메인화면, 공통상단NAV, 공통푸터
+                            교사, 수업용자료등 여러 페이지 제작 및 리뉴얼
+                        </p>
+                        <button>더보기</button>
+                    </div>
+                </article>
+                <article class="article slide-in">
+                    <div class="desc lf">
+                        <h2>관리자 페이지</h2>
+                        <span>Sketch app, HTML, CSS, JAVASCRIPT, Vue.js</span>
+                    </div>
+                    <div class="desc rt">
+                        <div class="shell">
+        
+                        </div>
+                        <div class="img-box bg-2">
+        
+                        </div>
+                    </div>
+                    <div class="paragraph">
+                        <p>
+                            관리자 페이지 디자인 시스템 제작 및 퍼블리싱
+                        </p>
+                        <button>더보기</button>
+                    </div>
+                </article>
         </section>
         <div class="sns">
             <a href="https://www.instagram.com/devmarte/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -70,6 +110,26 @@
     </div>
 
     <script>
+        // 스크롤시 나타내기
+        const sliderArticles = document.querySelectorAll('.slide-in')
+
+        function checkSlide(e) {
+            sliderArticles.forEach(item => {
+                const slideInAt = (window.scrollY+ window.innerHeight) - item.clientHeight / 1.3
+                const artiBottom = item.offsetTop + item.clientHeight
+                const isHalfShown = slideInAt > item.offsetTop
+                const isNotScrolledPast = window.scrollY < artiBottom
+
+                if(isHalfShown && isNotScrolledPast) {
+                    item.classList.add('active')
+                }else{
+                    item.classList.remove('active')
+                }
+            })
+        }
+
+        window.addEventListener('scroll', checkSlide)
+
         const burger = document.querySelector('.burger')
         const navi = document.querySelector('.navigation')
         
@@ -78,42 +138,42 @@
             navi.classList.toggle('active-nav')
         })
 
-        const wrap = document.documentElement
-        const bg = document.querySelector('.img-box')
-        // const bk = document.getElementById('bk-dot')
+        // const wrap = document.documentElement
+        // const bg = document.querySelector('.img-box')
+        // // const bk = document.getElementById('bk-dot')
 
-        let x = 0
-        let y = 0
-        let oriX = 0
-        let oriY = 0
-        let myX = 0
-        let myY = 0
-        let cX = 0
-        let cY = 0
-        let accel = 0.015
+        // let x = 0
+        // let y = 0
+        // let oriX = 0
+        // let oriY = 0
+        // let myX = 0
+        // let myY = 0
+        // let cX = 0
+        // let cY = 0
+        // let accel = 0.015
 
-        wrap.addEventListener('mousemove', xandymove)
+        // wrap.addEventListener('mousemove', xandymove)
 
-        function xandymove(e) {
-            x = (e.clientX - window.innerWidth / 2)
-            y = (e.clientY - window.innerWidth / 2)
-            oriX = (e.clientX)
-            oriY = (e.clientY)
+        // function xandymove(e) {
+        //     x = (e.clientX - window.innerWidth / 2)
+        //     y = (e.clientY - window.innerWidth / 2)
+        //     oriX = (e.clientX)
+        //     oriY = (e.clientY)
 
-            // bk.classList.add('appearopa')
-        }
-        if(!document.body.offsetWidth < 760){
-            loop()
-        }
+        //     // bk.classList.add('appearopa')
+        // }
+        // if(!document.body.offsetWidth < 760){
+        //     loop()
+        // }
 
-        function loop() {
-            myX += (x-myX) * accel
-            myY += (y-myY) * accel
+        // function loop() {
+        //     myX += (x-myX) * accel
+        //     myY += (y-myY) * accel
 
-            bg.style.backgroundPosition = `calc(50% + ${-myX/8}px) calc(50% + ${-myY/8}px)`
-            // bk.style.transform = `translate(${cX - 10}px, ${cY - 10}px)`
-            window.requestAnimationFrame(loop)
-        }
+        //     bg.style.backgroundPosition = `calc(50% + ${-myX/8}px) calc(50% + ${-myY/8}px)`
+        //     // bk.style.transform = `translate(${cX - 10}px, ${cY - 10}px)`
+        //     window.requestAnimationFrame(loop)
+        // }
 
     </script>
 </body>
