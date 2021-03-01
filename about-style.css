@@ -23,16 +23,31 @@
 .introduce .corner p {
     color: #fff;
     font-size: 0.7rem;
-    transform: rotate(90deg);
 }
 .introduce .top-left {
     top: 3%;
     left: -24px;
     line-height: 1.5;
+    opacity: 0;
+    transform: rotate(90deg);
+    animation: topleftup 1.2s forwards cubic-bezier(1,.27,.56,1.01);
+    animation-delay: 0.65s;
 }
-.introduce .top-right {
-    top: 4%;
-    right: -32px;
+.introduce .bottom-right {
+    width: 50px;
+    bottom: 11%;
+    right: 32px;
+    opacity: 0;
+    animation: bottomup 1.8s forwards cubic-bezier(1,.27,.56,1.01);
+    animation-delay: 1s;
+}
+.introduce .bottom-right p{
+    font-size: 0.7rem;
+}
+.introduce .bottom-right p .bold{
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: #fff;
 }
 .introduce .center{
     top: 58%;
@@ -47,7 +62,24 @@
     transform: rotate(0deg);
     font-size: 3rem;
 }
-
+@keyframes bottomup {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes topleftup {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 @keyframes profileup {
     0%{
         opacity: 0;

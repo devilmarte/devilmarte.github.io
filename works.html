@@ -33,7 +33,7 @@
                     <a href="works.html">Works</a>
                 </li>
                 <li>
-                    <a href="">Contact</a>
+                    <a href="mailto:devmarte@naver.com?subject=채용구인">Contact</a>
                 </li>
             </ul>
         </header>
@@ -56,7 +56,8 @@
                             Javascript, Nuxt.js, react-native
                             하이브리드 앱(스마트폰, 태블릿), 메인화면 인터렉션 슬라이드, 층별 소개, 기타 페이지 인터렉션등 적용 및 고도화
                         </p>
-                        <button><a href="#">더보기</a></button>
+                        <p class="spcfy">- 공동작업</p>
+                        <button><a href="https://play.google.com/store/apps/details?id=com.lgufstore_rn" target="_blank">더보기</a></button>
                     </div>
                 </article>
                 <article class="article slide-in">
@@ -77,7 +78,8 @@
                             요청한 디자인(psd) 토대로 메인화면, 공통상단NAV, 공통푸터
                             교사, 수업용자료등 여러 페이지 제작 및 리뉴얼
                         </p>
-                        <button>더보기</button>
+                        <p class="spcfy">- 공동작업</p>
+                        <button><a href="http://study.korean.net/servlet/action.home.MainAction" target="_blank">더보기</a></button>
                     </div>
                 </article>
                 <article class="article slide-in">
@@ -89,7 +91,7 @@
                         <div class="shell">
         
                         </div>
-                        <div class="img-box bg-2">
+                        <div class="img-box bg-3">
         
                         </div>
                     </div>
@@ -97,6 +99,7 @@
                         <p>
                             관리자 페이지 디자인 시스템 제작 및 퍼블리싱
                         </p>
+                        <p class="spcfy">- 개인작업</p>
                         <button>더보기</button>
                     </div>
                 </article>
@@ -112,7 +115,7 @@
 
         function checkSlide(e) {
             sliderArticles.forEach(item => {
-                const slideInAt = (window.scrollY+ window.innerHeight) - item.clientHeight / 1.4
+                const slideInAt = (window.scrollY+ window.innerHeight) - item.clientHeight / 1.6
                 const artiBottom = item.offsetTop + item.clientHeight
                 const isHalfShown = slideInAt > item.offsetTop
                 const isNotScrolledPast = window.scrollY < artiBottom

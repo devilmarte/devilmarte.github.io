@@ -32,14 +32,14 @@
     flex-direction: column;
     position: relative;
     height: 618px;
-    margin-bottom: 120px;
+    margin-bottom: 140px;
 }
 .slide-in {
-    transform-origin: left;
+    transform-origin: center;
     transition: 0.6s;
-    transform: translateX(-50%);
+    transform: translateY(-30%);
     opacity: 0;
-    transform: scale(0.3);
+    transform: scale(0.9);
 }
 .desc {
     display: flex;
@@ -70,8 +70,8 @@
     z-index: 10;
     animation: appearup2 1s forwards;
     animation-delay: 2.2s;
-    color: #afafaf;
-    font-size: 0.8rem;
+    color: #00ff66;
+    font-size: 0.75rem;
 }
 .rt {
     flex: 3;
@@ -95,6 +95,7 @@
 }
 .rt .img-box {
     width: 80%;
+    max-width: 560px;
     height: 100%;
     background: url('./bgs.jpg');
     background-position: center;
@@ -104,6 +105,13 @@
 .rt .bg-2 {
     background: url('./bgs2.jpg') 50% 50%;
     background-size: 410px;
+    background-repeat: no-repeat;
+}
+.rt .bg-3 {
+    /* background: url('./bgs3.jpg') 50% 50%; */
+    background: url('./bgs2.jpg') 50% 50%;
+    background-size: 410px;
+    background-repeat: no-repeat;
 }
 .right {
     transform: translateX(50%);
@@ -129,8 +137,14 @@
     line-height: 1.75;
     margin-bottom: 18px;
 }
+.paragraph p.spcfy {
+    width: 100%;
+    text-align: left;
+    font-size: 0.5rem;
+}
 .paragraph button {
     width: 100%;
+    max-width: 380px;
     padding: 8px 12px;
     background: #ffd17c;
     border: none;
@@ -156,7 +170,7 @@
 
 .article.active {
     opacity: 1;
-    transform: translate(0%) scale(1)
+    transform: translateY(0%) scale(1)
 }
 @keyframes apearpara {
     0% {
