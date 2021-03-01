@@ -148,6 +148,9 @@ select {
 }
 .serif {
     font-family: 'Lora';
+    color: #fff;
+    font-style: italic;
+    text-align: right;
 }
 .navigation {
     position: absolute;
@@ -260,7 +263,7 @@ select {
 .sns {
     position: fixed;
     bottom: 44px;
-    left: 32px;
+    left: 24px;
     width: 18px;
     height: 18px;
     z-index: 150;
