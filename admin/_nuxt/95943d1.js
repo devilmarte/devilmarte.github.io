@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{326:function(n,t,e){"use strict";e.r(t);var l={components:{Main:e(298).default}},o=(e(104),e(8)),component=Object(o.a)(l,(function(){var n=this.$createElement,t=this._self._c||n;return t("section",[t("Main")],1)}),[],!1,null,null,null);t.default=component.exports;installComponents(component,{Main:e(298).default})}}]);

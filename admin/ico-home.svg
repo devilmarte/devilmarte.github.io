@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="home-black-18dp">
+            <polygon id="Path" points="0 0 18 0 18 18 0 18"></polygon>
+            <path d="M7.5,14.25 L7.5,10.5 L10.5,10.5 L10.5,14.25 C10.5,14.6625 10.8375,15 11.25,15 L13.5,15 C13.9125,15 14.25,14.6625 14.25,14.25 L14.25,9 L15.525,9 C15.87,9 16.035,8.5725 15.7725,8.3475 L9.5025,2.7 C9.2175,2.445 8.7825,2.445 8.4975,2.7 L2.2275,8.3475 C1.9725,8.5725 2.13,9 2.475,9 L3.75,9 L3.75,14.25 C3.75,14.6625 4.0875,15 4.5,15 L6.75,15 C7.1625,15 7.5,14.6625 7.5,14.25 Z" id="Path" fill="#626573" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>
