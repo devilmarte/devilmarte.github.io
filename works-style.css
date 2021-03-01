@@ -132,7 +132,7 @@
 .paragraph button {
     width: 100%;
     padding: 8px 12px;
-    background: #16ff53;
+    background: #ffd17c;
     border: none;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -153,18 +153,7 @@
     animation: appearopa 0.3s forwards;
     animation-delay: 0.8s;
 }
-.sns {
-    position: fixed;
-    bottom: 44px;
-    left: 32px;
-    width: 18px;
-    height: 18px;
-    z-index: 150;
-}
-.sns .fab {
-    color: #fff;
-    font-size: 1.6rem;
-}
+
 .article.active {
     opacity: 1;
     transform: translate(0%) scale(1)

@@ -1,0 +1,33 @@
+.introduce {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.profile-pic {
+    width: 80%;
+    height: 60vh;
+    background: url('./img/profile.jpg') 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateY(20%);
+    opacity: 0;
+    animation: profileup 1.2s forwards cubic-bezier(1,.27,.56,1.01);
+    animation-delay: 0.5s;
+}
+.introduce p{
+    color: #fff;
+}
+
+@keyframes profileup {
+    0%{
+        opacity: 0;
+        transform: translateY(20%);
+    }
+    100%{
+    opacity: 1;
+    transform: translateY(-6%);
+    }
+}

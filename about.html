@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="about-style.css">
+    <link rel="stylesheet" type="text/css" href="commons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <!-- <div id="bk-dot"></div> -->
+        <header id="header">
+            <div class="logo">
+                <h1>MARTE</h1>
+            </div>
+            <div class="burger">
+            </div>
+            <ul class="navigation">
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="works.html">Works</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </header>
+        <section id="main">
+            <div class="introduce">
+                <div class="profile-pic">
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <div class="sns">
+        <a href="https://www.instagram.com/devmarte/" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <script>
+
+        const burger = document.querySelector('.burger')
+        const navi = document.querySelector('.navigation')
+        
+        burger.addEventListener('click', ()=>{
+            const navi = document.querySelector('.navigation')
+            navi.classList.toggle('active-nav')
+        })
+
+        const wrap = document.documentElement
+        const bg = document.querySelector('.profile-pic')
+
+        let x = 0
+        let y = 0
+        let oriX = 0
+        let oriY = 0
+        let myX = 0
+        let myY = 0
+        let cX = 0
+        let cY = 0
+        let accel = 0.015
+
+        wrap.addEventListener('mousemove', xandymove)
+
+        function xandymove(e) {
+            x = (e.clientX - window.innerWidth / 2)
+            y = (e.clientY - window.innerWidth / 2)
+            oriX = (e.clientX)
+            oriY = (e.clientY)
+
+        }
+        if(!document.body.offsetWidth < 760){
+            loop()
+        }
+
+        function loop() {
+            myX += (x-myX) * accel
+            myY += (y-myY) * accel
+
+            bg.style.backgroundPosition = `calc(50% + ${-myX/8}px) calc(50% + ${-myY/8}px)`
+            window.requestAnimationFrame(loop)
+        }
+
+    </script>
+</body>
+</html>
